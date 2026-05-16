@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background:#f5f5f5; padding:18px; color:#222; }
+  .card { background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.08); border-radius:4px; padding:1rem; max-width:340px; }
+  .eb { margin:0 0 .4rem; font-size:11px; color:#ee4d2d; text-transform:uppercase; letter-spacing:.12em; }
+  h2 { margin:0 0 .8rem; font-size:16px; }
+  .row { display:flex; justify-content:space-between; padding:.7rem 0; border-bottom:1px solid #ebebeb; font-size:14px; }
+  .row.total { font-size:17px; font-weight:600; border:0; padding-top:1rem; }
+  .row strong { color:#222; }
+  .btn { display:block; width:100%; min-height:2.85rem; padding:.75rem 1.2rem; border:0; border-radius:4px; background:#ee4d2d; color:#fff; cursor:pointer; font:inherit; font-size:14px; margin-top:.4rem; }
+  .note { margin:.6rem 0 0; color:#6b6f76; font-size:12px; line-height:1.4; }
+</style>
+</head>
+<body>
+  <aside class="card">
+    <p class="eb">Order summary</p>
+    <div class="row"><span>Subtotal</span><strong>$284.00</strong></div>
+    <div class="row"><span>Shipping</span><strong>Free</strong></div>
+    <div class="row"><span>Estimated tax</span><strong>$22.72</strong></div>
+    <div class="row total"><span>Total</span><strong>$306.72</strong></div>
+    <button class="btn">Place order</button>
+    <p class="note">Demo checkout only. Connect payment when ready.</p>
+  </aside>
+</body>
+</html>

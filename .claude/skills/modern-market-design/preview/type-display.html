@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #fff; color: var(--fg-1); padding: 20px; }
+  .row { display: flex; flex-direction: column; gap: 10px; }
+  .spec { display: flex; align-items: baseline; gap: 18px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  .spec:last-child { border-bottom: 0; }
+  .label { width: 90px; flex-shrink:0; font-family: var(--font-mono); font-size: 11px; color: var(--fg-2); text-transform: uppercase; letter-spacing: .04em; }
+  .sample { flex: 1; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="spec"><span class="label">Display</span><span class="sample" style="font-size:48px;font-weight:700;line-height:1.02">Mid-year deals</span></div>
+    <div class="spec"><span class="label">H1 / PDP</span><span class="sample" style="font-size:38px;font-weight:700;line-height:1.2">Solstice Speaker</span></div>
+    <div class="spec"><span class="label">H2 / Section</span><span class="sample" style="font-size:32px;font-weight:600;line-height:1.2">Trending deals today</span></div>
+  </div>
+</body>
+</html>

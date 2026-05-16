@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background:#fff; padding:24px; }
+  .row { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; min-height:2.85rem; padding:.75rem 1.2rem; border:1px solid transparent; border-radius:4px; cursor:pointer; font:inherit; font-size:14px; transition:background 160ms ease, transform 160ms ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn--primary { background:#ee4d2d; color:#fff; }
+  .btn--primary:hover { background:#d73211; }
+  .btn--light { background:#fff; color:#ee4d2d; border-color:#fff; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+  .btn--ghost { background:#fff; border-color:#d9d9d9; color:#555; }
+  .btn--ghostlight { background:rgba(255,255,255,.16); border-color:rgba(255,255,255,.4); color:#fff; }
+  .btn[disabled] { opacity:.45; cursor:not-allowed; transform:none; }
+  .onorange { background:linear-gradient(180deg,#f96f3a,#ee4d2d); padding:14px; border-radius:8px; }
+  .label { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); text-transform: uppercase; letter-spacing: .04em; width:90px; }
+  .group { display:flex; align-items:center; gap:14px; margin-bottom:14px; }
+</style>
+</head>
+<body>
+  <div class="group"><div class="label">Primary</div><button class="btn btn--primary">Place order</button><button class="btn btn--primary" disabled>Disabled</button></div>
+  <div class="group"><div class="label">Ghost</div><button class="btn btn--ghost">Remove</button><button class="btn btn--ghost">Buy now</button></div>
+  <div class="group"><div class="label">On orange</div>
+    <div class="onorange" style="display:flex;gap:12px"><button class="btn btn--light">Shop now</button><button class="btn btn--ghostlight">View cart</button></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Market — Web UI Kit</title>
+  <link rel="stylesheet" href="../../colors_and_type.css" />
+  <link rel="stylesheet" href="kit.css" />
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script src="data.js"></script>
+  <script type="text/babel" src="Header.jsx"></script>
+  <script type="text/babel" src="Hero.jsx"></script>
+  <script type="text/babel" src="ProductCard.jsx"></script>
+  <script type="text/babel" src="ProductDetail.jsx"></script>
+  <script type="text/babel" src="Checkout.jsx"></script>
+  <script type="text/babel" src="Login.jsx"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function App() {
+      const [screen, setScreen] = React.useState("home"); // home | product | checkout | login | register
+      const [currentProduct, setCurrentProduct] = React.useState(null);
+      const [cart, setCart] = React.useState([]);
+
+      const cartCount = cart.reduce((n, it) => n + it.quantity, 0);
+
+      function navigate(target) {
+        setScreen(target);
+        window.scrollTo(0, 0);
+      }
+
+      function openProduct(p) {
+        setCurrentProduct(p);
+        navigate("product");
+      }
+
+      function addToCart(product) {
+        setCart(curr => {
+          const existing = curr.find(it => it.product.id === product.id);
+          if (existing) {
+            return curr.map(it => it.product.id === product.id ? {...it, quantity: it.quantity + 1} : it);
+          }
+          return [...curr, { product, quantity: 1 }];
+        });
+      }
+
+      function updateQty(id, q) {
+        setCart(curr => curr.map(it => it.product.id === id ? {...it, quantity: q} : it));
+      }
+
+      function removeItem(id) {
+        setCart(curr => curr.filter(it => it.product.id !== id));
+      }
+
+      const featured = PRODUCTS.filter(p => !p.isNew).slice(0, 4);
+      const newArrivals = PRODUCTS.filter(p => p.isNew);
+
+      if (screen === "login")    return <Login onNavigate={navigate} />;
+      if (screen === "register") return <Register onNavigate={navigate} />;
+
+      return (
+        <>
+          <Header cartCount={cartCount} onNavigate={navigate} currentScreen={screen} />
+
+          {screen === "home" && (
+            <main className="marketplace-page">
+              <Hero onNavigate={navigate} />
+              <CategoryStrip />
+              <FeatureBand />
+              <ProductGrid
+                eyebrow="Flash sale"
+                title="Trending deals shoppers are checking out right now."
+                ctaLabel="Go to checkout"
+                ctaTarget="checkout"
+                products={featured}
+                onOpen={openProduct}
+                onAdd={addToCart}
+                onNavigate={navigate}
+              />
+              <ProductGrid
+                eyebrow="Recommended for you"
+                title="Fresh arrivals with marketplace pricing and fast dispatch."
+                products={newArrivals}
+                onOpen={openProduct}
+                onAdd={addToCart}
+                onNavigate={navigate}
+                alt
+              />
+            </main>
+          )}
+
+          {screen === "product" && (
+            <ProductDetail
+              product={currentProduct}
+              onAdd={addToCart}
+              onNavigate={navigate}
+              onBack={() => navigate("home")}
+            />
+          )}
+
+          {screen === "checkout" && (
+            <Checkout
+              items={cart}
+              onUpdateQty={updateQty}
+              onRemove={removeItem}
+              onNavigate={navigate}
+            />
+          )}
+        </>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
+</html>

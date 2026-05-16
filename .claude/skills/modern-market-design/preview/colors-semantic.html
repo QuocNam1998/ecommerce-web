@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #fff; color: var(--fg-1); padding: 20px; }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .swatch { border-radius: 8px; overflow: hidden; border: 1px solid var(--line); }
+  .chip { height: 76px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:600; font-size:13px; letter-spacing:.04em; }
+  .meta { padding: 10px 12px; font-size: 12px; line-height: 1.4; background: #fff; }
+  .meta .name { font-weight: 600; }
+  .meta .desc { color: var(--fg-2); font-size: 11px; margin-top:2px; }
+  .meta .hex { color: var(--fg-2); font-family: var(--font-mono); font-size: 10px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="swatch"><div class="chip" style="background:#26aa99">Free shipping</div><div class="meta"><div class="name">Success</div><div class="hex">#26AA99</div><div class="desc">Free-shipping label, positive states</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#d73211">Error</div><div class="meta"><div class="name">Danger</div><div class="hex">#D73211</div><div class="desc">Form errors; same as accent-dark</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#ffbe4a;color:#9a4500">Promo</div><div class="meta"><div class="name">Warning / promo</div><div class="hex">#FFBE4A</div><div class="desc">Auth promo backdrop highlight</div></div></div>
+  </div>
+</body>
+</html>

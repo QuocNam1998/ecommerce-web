@@ -1,0 +1,261 @@
+.page {
+  padding-bottom: 3rem;
+  padding-top: 7.5rem;
+}
+
+.homeBanner {
+  width: min(calc(100% - 2rem), var(--max-width));
+  height: 14.688rem;
+  margin: 0 auto;
+  padding-top: 2.1rem;
+  display: flex;
+  gap: 0.25rem;
+  align-items: stretch;
+}
+
+.homeBanner > :first-child {
+  flex: 2 1 0;
+  min-width: 0;
+}
+
+.bannerEntry {
+  flex: 1 1 0;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.25rem;
+}
+
+.homeBannerOverlay,
+.homeBannerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.homeBannerOverlay {
+  background: linear-gradient(135deg, #ffc857 0%, #ff8f3d 100%);
+}
+
+.homeBannerContent {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ef476f 100%);
+}
+
+.quickEntry {
+  background: #ffffff;
+  border-bottom: 0;
+}
+
+.quickEntryInner {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1.2rem 0 0.5rem;
+}
+
+.quickEntryItem {
+  display: grid;
+  justify-items: center;
+  gap: 0.65rem;
+  text-align: center;
+}
+
+.quickEntryIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 18px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  box-shadow: inset 0 0 0 1px #ebebeb;
+}
+
+.quickEntryIconBlue,
+.quickEntryIconWarm,
+.quickEntryIconRose,
+.quickEntryIconGold,
+.quickEntryIconWarmOutline {
+  background: #ffffff;
+}
+
+.quickEntryIconWarmOutline {
+  box-shadow: inset 0 0 0 2px #f36b30;
+}
+
+.quickEntryLabel {
+  max-width: 8rem;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.marketSection {
+  padding-top: 1.35rem;
+}
+
+.marketSectionHome {
+  padding-top: 1.1rem;
+}
+
+.marketSectionAlt {
+  padding-bottom: 3rem;
+}
+
+.categoryPanel {
+  position: relative;
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+}
+
+.categoryPanelHeader {
+  display: flex;
+  align-items: center;
+  min-height: 4.75rem;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.categoryPanelHeader h2 {
+  margin: 0;
+  color: #6a6f73;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  background: #ffffff;
+}
+
+.categoryCard {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 1rem;
+  min-height: 11.75rem;
+  padding: 1.55rem 0.75rem 1rem;
+  text-align: center;
+  border-right: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.categoryCard:hover {
+  transform: translateY(-1px);
+  box-shadow: inset 0 0 0 1px #f0f0f0;
+}
+
+.categoryIconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.25rem;
+  height: 5.25rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 30%, #ffffff, #f2f2f2 68%);
+}
+
+.categoryIcon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.categoryLabel {
+  color: #2f3440;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.categoryCarouselButton {
+  position: absolute;
+  top: 50%;
+  right: -1.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.14);
+  color: #767676;
+  font-size: 3rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+@media (max-width: 1080px) {
+  .homeBanner {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .bannerEntry {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+  }
+
+  .categoryGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .bannerEntry,
+  .quickEntryInner,
+  .categoryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .categoryPanelHeader {
+    min-height: 3.75rem;
+    padding: 0 1rem;
+  }
+
+  .categoryPanelHeader h2 {
+    font-size: 1.35rem;
+  }
+
+  .categoryCard {
+    min-height: 9.75rem;
+    padding: 1rem 0.5rem 0.85rem;
+  }
+
+  .categoryIconWrap {
+    width: 4.25rem;
+    height: 4.25rem;
+  }
+
+  .categoryIcon {
+    font-size: 2.4rem;
+  }
+
+  .categoryCarouselButton {
+    display: none;
+  }
+}

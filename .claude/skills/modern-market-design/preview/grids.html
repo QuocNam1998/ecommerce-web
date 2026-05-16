@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background:#fff; padding:24px; color:#222; }
+  .wrap { display:grid; gap:14px; }
+  .ex { display:grid; grid-template-columns: 90px 1fr; gap:14px; align-items:center; padding-bottom:14px; border-bottom:1px solid var(--line); }
+  .ex:last-child { border-bottom:0; }
+  .label { font-family: var(--font-mono); font-size:10px; color: var(--fg-2); text-transform: uppercase; letter-spacing: .04em; }
+  .grid { display:grid; gap:8px; height:54px; }
+  .col { background:linear-gradient(135deg,#ff8a3c,#ee4d2d); border-radius:3px; }
+  .h4 { grid-template-columns: repeat(4, 1fr); }
+  .h2-1 { grid-template-columns: 2fr 1fr; }
+  .h8 { grid-template-columns: repeat(8, 1fr); }
+  .pdp { grid-template-columns: .95fr 1.05fr; }
+  .ck { grid-template-columns: 1.4fr .6fr; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="ex"><div class="label">Hero<br>2fr · 1fr</div><div class="grid h2-1"><div class="col"></div><div class="col"></div></div></div>
+    <div class="ex"><div class="label">Category<br>8 cols</div><div class="grid h8"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div></div></div>
+    <div class="ex"><div class="label">Product<br>4 cols</div><div class="grid h4"><div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div></div></div>
+    <div class="ex"><div class="label">PDP<br>.95 · 1.05</div><div class="grid pdp"><div class="col"></div><div class="col"></div></div></div>
+    <div class="ex"><div class="label">Checkout<br>1.4 · .6</div><div class="grid ck"><div class="col"></div><div class="col"></div></div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.addButton {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  background: #ee4d2d;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.addButton:hover {
+  background: #d73211;
+}
+
+.tableWrapper {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  overflow-x: auto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  border-bottom: 1px solid #ebebeb;
+  background: #fafafa;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: #fafafa;
+}
+
+.statusActive {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+.statusDeleted {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #fce8e6;
+  color: #d93025;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.editLink {
+  padding: 0.3rem 0.75rem;
+  background: #f0f0f0;
+  color: #333;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.editLink:hover {
+  background: #e0e0e0;
+}
+
+.deleteButton {
+  padding: 0.3rem 0.75rem;
+  background: #fce8e6;
+  color: #d93025;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.deleteButton:hover {
+  background: #f8c5c0;
+}
+
+.empty {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+}

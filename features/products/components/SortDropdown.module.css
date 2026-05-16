@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #767676;
+  white-space: nowrap;
+}
+
+.select {
+  min-width: 0;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background: #fff;
+  color: #2f3440;
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 120ms ease;
+}
+
+.select:focus {
+  border-color: #ee4d2d;
+}

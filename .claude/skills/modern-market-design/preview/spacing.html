@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background:#fff; padding:24px; color:#222; }
+  .scale { display:flex; align-items:flex-end; gap:8px; }
+  .step { display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .bar { width:34px; background:linear-gradient(180deg,#ff8a3c,#ee4d2d); border-radius:3px; }
+  .v { font-size:10px; color: var(--fg-2); font-family: var(--font-mono); }
+  .label { font-size:11px; font-weight:600; }
+  h3 { margin:0 0 12px; font-size:13px; font-family: var(--font-mono); font-weight:600; color: var(--fg-2); text-transform: uppercase; letter-spacing:.04em; }
+  .group { margin-bottom:20px; }
+</style>
+</head>
+<body>
+  <div class="group">
+    <h3>Gaps & paddings</h3>
+    <div class="scale">
+      <div class="step"><div class="bar" style="height:6px"></div><div class="label">0.35</div><div class="v">≈6px</div></div>
+      <div class="step"><div class="bar" style="height:9px"></div><div class="label">0.55</div><div class="v">≈9px</div></div>
+      <div class="step"><div class="bar" style="height:12px"></div><div class="label">0.75</div><div class="v">12px</div></div>
+      <div class="step"><div class="bar" style="height:16px"></div><div class="label">1.0</div><div class="v">16px</div></div>
+      <div class="step"><div class="bar" style="height:20px"></div><div class="label">1.25</div><div class="v">20px</div></div>
+      <div class="step"><div class="bar" style="height:24px"></div><div class="label">1.5</div><div class="v">24px</div></div>
+      <div class="step"><div class="bar" style="height:40px"></div><div class="label">2.5</div><div class="v">40px</div></div>
+      <div class="step"><div class="bar" style="height:48px"></div><div class="label">3.0</div><div class="v">48px</div></div>
+    </div>
+  </div>
+</body>
+</html>

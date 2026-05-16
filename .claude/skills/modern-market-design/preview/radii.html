@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #fff; color: var(--fg-1); padding: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+  .item { display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .sample { width: 64px; height: 48px; background: linear-gradient(135deg,#ff8a3c,#ee4d2d); }
+  .meta { font-size: 11px; text-align:center; }
+  .meta .name { font-weight: 600; }
+  .meta .v { color: var(--fg-2); font-family: var(--font-mono); font-size: 10px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item"><div class="sample" style="border-radius:2px"></div><div class="meta"><div class="name">XS</div><div class="v">2px</div></div></div>
+    <div class="item"><div class="sample" style="border-radius:4px"></div><div class="meta"><div class="name">SM</div><div class="v">4px</div></div></div>
+    <div class="item"><div class="sample" style="border-radius:12px"></div><div class="meta"><div class="name">MD</div><div class="v">12px</div></div></div>
+    <div class="item"><div class="sample" style="border-radius:18px"></div><div class="meta"><div class="name">LG</div><div class="v">18px</div></div></div>
+    <div class="item"><div class="sample" style="border-radius:22px"></div><div class="meta"><div class="name">XL</div><div class="v">22px</div></div></div>
+    <div class="item"><div class="sample" style="border-radius:999px"></div><div class="meta"><div class="name">Pill</div><div class="v">999px</div></div></div>
+  </div>
+</body>
+</html>

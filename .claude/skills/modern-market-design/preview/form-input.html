@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background:#fff; padding:24px; color:#222; }
+  .stack { display:grid; gap:14px; max-width:380px; }
+  label { display:block; }
+  input { width:100%; min-height:2.5rem; padding:.75rem; border:1px solid #d6d6d6; border-radius:2px; outline:none; box-shadow: inset 0 1px 2px rgba(0,0,0,.03); font:inherit; font-size:14px; }
+  input.focus { border-color:rgba(238,77,45,.9); box-shadow: 0 0 0 3px rgba(238,77,45,.12); }
+  input.error { border-color:#d73211; }
+  .hint { display:block; margin-top:.45rem; color:#8f8f8f; font-size:12px; }
+  .hint.err { color:#d73211; }
+  .lab { font-family: var(--font-mono); font-size:10px; color: var(--fg-2); text-transform: uppercase; letter-spacing: .04em; margin-bottom:6px; }
+</style>
+</head>
+<body>
+  <div class="stack">
+    <div><div class="lab">Default</div><input placeholder="Phone number / Email"><span class="hint">Use your phone number or email address.</span></div>
+    <div><div class="lab">Focused</div><input class="focus" value="shopper@modern-market.dev"><span class="hint">Use your phone number or email address.</span></div>
+    <div><div class="lab">Error</div><input class="error" value="not-an-email"><span class="hint err">Enter a valid phone number or email address.</span></div>
+  </div>
+</body>
+</html>

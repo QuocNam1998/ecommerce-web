@@ -1,0 +1,93 @@
+.priceFilter {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.heading {
+  margin: 0 0 0.75rem;
+  color: #2f3440;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #2f3440;
+  background: #fff;
+  outline: none;
+  transition: border-color 120ms ease;
+}
+
+.input:focus {
+  border-color: #ee4d2d;
+}
+
+.separator {
+  color: #b0b0b0;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.applyButton {
+  flex: 1;
+  padding: 0.4rem 0.75rem;
+  border: 0;
+  border-radius: 4px;
+  background: #ee4d2d;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.applyButton:hover {
+  background: #d73211;
+}
+
+.clearButton {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background: #fff;
+  color: #5a5f6b;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+.clearButton:hover {
+  border-color: #ee4d2d;
+  color: #ee4d2d;
+}
+
+@media (max-width: 720px) {
+  .priceFilter {
+    width: 100%;
+  }
+}

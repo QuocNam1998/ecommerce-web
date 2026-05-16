@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #fff; color: var(--fg-1); padding: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .swatch { border-radius: 8px; overflow: hidden; border: 1px solid var(--line); }
+  .chip { height: 70px; }
+  .meta { padding: 8px 10px; font-size: 11px; line-height: 1.4; background: #fff; }
+  .meta .name { font-weight: 600; color: var(--fg-1); }
+  .meta .hex { color: var(--fg-2); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.02em; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="swatch">
+      <div class="chip" style="background:#ee4d2d"></div>
+      <div class="meta"><div class="name">Accent</div><div class="hex">#EE4D2D</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:#d73211"></div>
+      <div class="meta"><div class="name">Accent dark</div><div class="hex">#D73211</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:#ff7337"></div>
+      <div class="meta"><div class="name">Accent glow</div><div class="hex">#FF7337</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:#fff1eb"></div>
+      <div class="meta"><div class="name">Accent soft</div><div class="hex">#FFF1EB</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:linear-gradient(180deg,#f96f3a 0%,#ee4d2d 100%)"></div>
+      <div class="meta"><div class="name">Header gradient</div><div class="hex">#F96F3A → #EE4D2D</div></div>
+    </div>
+  </div>
+</body>
+</html>

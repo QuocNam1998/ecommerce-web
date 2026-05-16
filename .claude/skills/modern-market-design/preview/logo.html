@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background:#fff; padding:24px; display:grid; gap:18px; }
+  .row { display:flex; align-items:center; gap:18px; padding:10px 0; border-bottom:1px solid var(--line); }
+  .row:last-child { border-bottom:0; }
+  .row .light { padding:10px; }
+  .row .dark { padding:10px; background:linear-gradient(180deg,#f96f3a,#ee4d2d); border-radius:6px; }
+  .label { font-family: var(--font-mono); font-size:10px; color: var(--fg-2); text-transform: uppercase; letter-spacing: .04em; width:130px; }
+</style>
+</head>
+<body>
+  <div class="row"><div class="label">Wordmark</div><div class="light"><img src="../assets/logo-wordmark.svg" height="40"></div></div>
+  <div class="row"><div class="label">On orange</div><div class="dark"><img src="../assets/logo-wordmark-white.svg" height="40"></div></div>
+  <div class="row"><div class="label">Mark only</div><div class="light"><img src="../assets/logo-mark.svg" height="48"></div><span style="color:var(--fg-2);font-size:12px">favicon / app icon</span></div>
+</body>
+</html>

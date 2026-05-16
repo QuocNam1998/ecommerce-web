@@ -1,0 +1,213 @@
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.page {
+  padding-top: 7.5rem;
+  padding-bottom: 3rem;
+}
+
+.inner {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* ── Empty state ─────────────────────────────────────────── */
+.empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+}
+
+.emptyText {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Order list ──────────────────────────────────────────── */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Order card ──────────────────────────────────────────── */
+.card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.15s ease;
+}
+
+.card:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
+}
+
+.cardMain {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.orderId {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  font-family: monospace;
+}
+
+.orderDate {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.cardDetails {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.total {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ee4d2d;
+}
+
+.itemCount {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ── Status badge ────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+}
+
+.statusPending {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.statusConfirmed {
+  background: #e8f0fe;
+  color: #1a73e8;
+}
+
+.statusShipped {
+  background: #f0e6ff;
+  color: #7b2ff7;
+}
+
+.statusDelivered {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+.statusCancelled {
+  background: #fce8e6;
+  color: #d93025;
+}
+
+/* ── View details action ─────────────────────────────────── */
+.viewLink {
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ee4d2d;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.viewLink:hover {
+  text-decoration: underline;
+}
+
+/* ── Skeleton loading ────────────────────────────────────── */
+.bone {
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+.skeletonCard {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.skeletonMain {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.skeletonRow {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.boneId    { height: 0.9rem;  width: 6rem; }
+.boneDate  { height: 0.8rem;  width: 5rem; }
+.boneBadge { height: 1.2rem;  width: 4.5rem; border-radius: 999px; }
+.boneTotal { height: 1rem;    width: 4rem; }
+.boneCount { height: 0.8rem;  width: 5.5rem; }
+.boneLink  { height: 0.85rem; width: 5rem; flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .viewLink {
+    align-self: flex-end;
+  }
+
+  .skeletonCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+}

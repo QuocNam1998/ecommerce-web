@@ -1,0 +1,237 @@
+/* =============================================================
+   Modern Market — Design Tokens
+   Pulled directly from QuocNam1998/ecommerce-web/styles/globals.css
+   plus a documented type ramp for designers.
+   ============================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  /* -----------------------------------------------------------
+     COLOR — BASE (literal values from the codebase)
+     ----------------------------------------------------------- */
+
+  /* Brand / accent — the persimmon orange marketplace color */
+  --accent:           #ee4d2d;  /* primary CTA, prices, links on white */
+  --accent-dark:      #d73211;  /* hover state on primary buttons */
+  --accent-soft:      #fff1eb;  /* tinted panel background (price panel) */
+  --accent-glow:      #ff7337;  /* highlight in gradients */
+  --accent-gradient-from: #f96f3a; /* header gradient top */
+  --accent-gradient-to:   #ee4d2d; /* header gradient bottom */
+  --accent-login-from:    #ee4d2d; /* login stage gradient top */
+  --accent-login-to:      #e53d20; /* login stage gradient bottom */
+
+  /* Neutrals */
+  --background:       #f5f5f5;  /* page background */
+  --surface:          #ffffff;  /* cards, panels */
+  --surface-alt:      #fff4ee;  /* warm-tinted surface */
+  --foreground:       #222222;  /* primary text */
+  --muted:            #6b6f76;  /* secondary text, descriptions */
+  --muted-2:          #767676;  /* legal / agreement text */
+  --muted-3:          #8f8f8f;  /* field hints */
+  --muted-4:          #b1b1b1;  /* footnotes (login register) */
+  --muted-5:          #bdbdbd;  /* OR divider color */
+  --line:             #ebebeb;  /* hairline borders */
+  --line-strong:      #d9d9d9;  /* form input borders */
+  --line-input:       #d6d6d6;  /* default input border */
+
+  /* Semantic */
+  --success:          #26aa99;  /* "Free shipping" green */
+  --danger:           #d73211;  /* form errors */
+  --warning:          #ffbe4a;  /* promo accents */
+  --gold:             #fff2a8;  /* ticket value highlights */
+
+  /* Shadows */
+  --shadow:           0 2px 10px rgba(0, 0, 0, 0.08);   /* default card */
+  --shadow-card:      0 3px 10px rgba(0, 0, 0, 0.14);   /* login card */
+  --shadow-promo:     0 22px 40px rgba(130, 28, 5, 0.25); /* hero promo card */
+  --shadow-ticket:    0 18px 35px rgba(0, 0, 0, 0.14);  /* promo tickets */
+  --shadow-header:    0 1px 0 rgba(0, 0, 0, 0.08);     /* sticky header */
+
+  /* Radii */
+  --radius-xs:        2px;   /* form inputs, login submit */
+  --radius-sm:        4px;   /* default buttons, product cards */
+  --radius-md:        12px;
+  --radius-lg:        18px;  /* hero banners, large cards */
+  --radius-xl:        22px;  /* promo tickets */
+  --radius-2xl:       28px;  /* hero promo card */
+  --radius-pill:      999px; /* cart pills, tags, chips */
+
+  /* Layout */
+  --max-width:        1200px;
+  --gutter:           1rem;
+  --gutter-lg:        1.25rem;
+  --gutter-xl:        2.5rem;
+
+  /* -----------------------------------------------------------
+     SEMANTIC COLOR ROLES (recommended in new components)
+     ----------------------------------------------------------- */
+  --fg-1:             var(--foreground);     /* primary text */
+  --fg-2:             var(--muted);          /* secondary text */
+  --fg-3:             var(--muted-3);        /* tertiary / hints */
+  --fg-inverse:       #ffffff;
+  --fg-brand:         var(--accent);
+  --fg-success:       var(--success);
+  --fg-danger:        var(--danger);
+
+  --bg-page:          var(--background);
+  --bg-surface:       var(--surface);
+  --bg-surface-warm:  var(--surface-alt);
+  --bg-brand:         var(--accent);
+  --bg-brand-soft:    var(--accent-soft);
+
+  --border-subtle:    var(--line);
+  --border-strong:    var(--line-strong);
+
+  /* -----------------------------------------------------------
+     TYPOGRAPHY — FAMILIES
+     Original uses proprietary "Shopee 2021" / "SHPBurmese" with
+     fallbacks to system fonts. We substitute Inter as a close
+     metrics match that's freely available on Google Fonts.
+     ----------------------------------------------------------- */
+  --font-sans:
+    "Inter",
+    -apple-system,
+    "Helvetica Neue",
+    Helvetica,
+    Roboto,
+    "Droid Sans",
+    Arial,
+    sans-serif;
+  --font-sans-medium: var(--font-sans);
+  --font-display:     var(--font-sans);
+  --font-mono:        ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* -----------------------------------------------------------
+     TYPOGRAPHY — SCALE
+     Sizes observed in the codebase (no formal ramp existed).
+     ----------------------------------------------------------- */
+  --fs-xxs:           0.72rem;  /* 11.5px — ticket small, badges */
+  --fs-xs:            0.75rem;  /* 12px   — meta, legal */
+  --fs-sm:            0.875rem; /* 14px   — body small, inputs */
+  --fs-base:          1rem;     /* 16px   — body */
+  --fs-md:            1.1rem;   /* 17.6px — info-card heading */
+  --fs-lg:            1.35rem;  /* 21.6px — price (product card) */
+  --fs-xl:            1.55rem;  /* 24.8px — brand wordmark */
+  --fs-2xl:           2rem;     /* 32px   — section headers */
+  --fs-display-sm:    2.4rem;   /* 38.4px — product title */
+  --fs-display:       clamp(2.5rem, 5vw, 4rem); /* hero h1 */
+  --fs-mega:          clamp(6rem, 10vw, 9.6rem); /* login promo number */
+
+  --fw-regular:       400;
+  --fw-medium:        500;
+  --fw-semibold:      600;
+  --fw-bold:          700;
+  --fw-extrabold:     800;
+  --fw-black:         900;
+
+  --lh-tight:         1.0;
+  --lh-snug:          1.2;
+  --lh-normal:        1.4;
+  --lh-relaxed:       1.7;
+
+  --tracking-tight:   -0.01em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-eyebrow: 0.12em;
+}
+
+/* =============================================================
+   SEMANTIC TEXT STYLES — convenience classes
+   Use these in new code instead of inventing one-off styles.
+   ============================================================= */
+
+.t-display {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: var(--fw-bold);
+  line-height: 1.02;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+
+.t-mega {
+  font-family: var(--font-display);
+  font-size: var(--fs-mega);
+  font-weight: var(--fw-extrabold);
+  line-height: 0.85;
+  color: var(--fg-inverse);
+  text-shadow: 5px 7px 0 rgba(160, 38, 0, 0.32);
+}
+
+.t-h1 {
+  font-size: var(--fs-display-sm);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+
+.t-h2 {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+
+.t-h3 {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+}
+
+.t-body {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-1);
+}
+
+.t-body-sm {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+  color: var(--fg-1);
+}
+
+.t-muted {
+  font-size: var(--fs-sm);
+  color: var(--fg-2);
+}
+
+.t-eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--fg-brand);
+}
+
+.t-price {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--fg-brand);
+}
+
+.t-price-lg {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--fg-brand);
+}
+
+.t-meta {
+  font-size: var(--fs-xs);
+  color: var(--fg-2);
+}
+
+.t-legal {
+  font-size: var(--fs-xs);
+  color: var(--muted-2);
+  line-height: 1.4;
+}
+
+.t-badge {
+  font-size: var(--fs-xxs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wide);
+}

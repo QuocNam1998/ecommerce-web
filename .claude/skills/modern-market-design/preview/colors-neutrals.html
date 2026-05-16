@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #fff; color: var(--fg-1); padding: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .swatch { border-radius: 8px; overflow: hidden; border: 1px solid var(--line); }
+  .chip { height: 70px; }
+  .meta { padding: 8px 10px; font-size: 11px; line-height: 1.4; background: #fff; }
+  .meta .name { font-weight: 600; color: var(--fg-1); }
+  .meta .hex { color: var(--fg-2); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.02em; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="swatch"><div class="chip" style="background:#222222"></div><div class="meta"><div class="name">Foreground</div><div class="hex">#222222</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#6b6f76"></div><div class="meta"><div class="name">Muted</div><div class="hex">#6B6F76</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#8f8f8f"></div><div class="meta"><div class="name">Muted 3 (hint)</div><div class="hex">#8F8F8F</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#bdbdbd"></div><div class="meta"><div class="name">Muted 5 (divider)</div><div class="hex">#BDBDBD</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#d6d6d6"></div><div class="meta"><div class="name">Line input</div><div class="hex">#D6D6D6</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#ebebeb"></div><div class="meta"><div class="name">Line</div><div class="hex">#EBEBEB</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#f5f5f5"></div><div class="meta"><div class="name">Background</div><div class="hex">#F5F5F5</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#fff4ee"></div><div class="meta"><div class="name">Surface alt</div><div class="hex">#FFF4EE</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#ffffff;border-top:1px solid #ebebeb;border-bottom:1px solid #ebebeb"></div><div class="meta"><div class="name">Surface</div><div class="hex">#FFFFFF</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#fff2a8"></div><div class="meta"><div class="name">Gold</div><div class="hex">#FFF2A8</div></div></div>
+  </div>
+</body>
+</html>

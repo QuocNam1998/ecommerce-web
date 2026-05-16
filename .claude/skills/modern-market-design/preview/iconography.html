@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { margin:0; font-family: var(--font-sans); background:#fff; padding:24px; color:#222; }
+  .row { display:flex; align-items:center; gap:22px; margin-bottom:18px; }
+  .label { font-family: var(--font-mono); font-size:10px; color: var(--fg-2); text-transform: uppercase; letter-spacing: .04em; width:130px; flex-shrink:0; }
+  .set { display:flex; gap:18px; align-items:center; }
+  .set i { display:inline-flex; width:24px; height:24px; }
+  .onorange { background:linear-gradient(180deg,#f96f3a,#ee4d2d); padding:10px 14px; border-radius:6px; color:#fff; display:inline-flex; gap:14px; align-items:center; }
+  .note { color:var(--fg-2); font-size:12px; line-height:1.4; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="label">Lucide · default</div>
+    <div class="set" style="color:#222">
+      <i data-lucide="search"></i>
+      <i data-lucide="shopping-bag"></i>
+      <i data-lucide="user"></i>
+      <i data-lucide="heart"></i>
+      <i data-lucide="bell"></i>
+      <i data-lucide="map-pin"></i>
+      <i data-lucide="chevron-down"></i>
+      <i data-lucide="x"></i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="label">On orange · white</div>
+    <div class="onorange">
+      <i data-lucide="search"></i>
+      <i data-lucide="shopping-bag"></i>
+      <i data-lucide="bell"></i>
+      <i data-lucide="user"></i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="label">Active · accent</div>
+    <div class="set" style="color:#ee4d2d">
+      <i data-lucide="shopping-bag"></i>
+      <i data-lucide="heart"></i>
+      <i data-lucide="star"></i>
+    </div>
+  </div>
+  <p class="note">Stroke 2px · 1.1rem inline / 1.4rem icon-only buttons · inherits <code>currentColor</code>. No emoji.</p>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background:#f5f5f5; padding:0; color:#222; }
+  .wrap { background:linear-gradient(180deg,#ee4d2d 0%,#f76334 100%); padding:20px; }
+  .hero { display:grid; grid-template-columns: 2fr 1fr; gap:1rem; max-width:660px; }
+  .banner { min-height: 220px; padding:1.4rem; border-radius:18px; color:#fff; background:linear-gradient(135deg, rgba(0,0,0,.12), rgba(0,0,0,.02)), linear-gradient(120deg, #ff8a3c, #ff5d2c 55%, #ffb35e); box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+  .eb { margin:0 0 .5rem; font-size:11px; text-transform:uppercase; letter-spacing:.12em; color:rgba(255,255,255,.9); }
+  h1 { margin:0; max-width:11ch; font-size:30px; line-height:1.02; }
+  .side { display:grid; gap:.8rem; }
+  .scard { background:#fff; box-shadow: 0 2px 10px rgba(0,0,0,.08); border-radius:18px; padding:1rem; font-size:12px; }
+  .scard span, .scard p { color:#6b6f76; }
+  .scard strong { display:block; margin:.4rem 0; font-size:18px; color:#ee4d2d; }
+  .scard p { margin:0; }
+  .accent { background:linear-gradient(180deg,#fff6f2,#ffffff); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="banner">
+        <p class="eb">Mega campaign</p>
+        <h1>Mid-year deals.</h1>
+      </div>
+      <div class="side">
+        <div class="scard accent"><span>Voucher Pack</span><strong>Save $25</strong><p>Collect bundle vouchers.</p></div>
+        <div class="scard"><span>Free Shipping</span><strong>Over $150</strong><p>Daily shipping credits.</p></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

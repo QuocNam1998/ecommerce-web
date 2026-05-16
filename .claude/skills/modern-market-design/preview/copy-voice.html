@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background:#fff; padding:24px; color:#222; }
+  .stack { display:grid; gap:12px; }
+  .item { display:grid; grid-template-columns: 90px 1fr; gap:14px; align-items:center; padding-bottom:10px; border-bottom:1px solid var(--line); }
+  .item:last-child { border-bottom:0; }
+  .label { font-family: var(--font-mono); font-size:10px; color:var(--fg-2); text-transform:uppercase; letter-spacing:.04em; }
+  .copy { font-size:14px; line-height:1.55; }
+  .copy strong { font-weight:600; }
+  .ex { color:var(--fg-1); }
+  .meta { color:var(--fg-2); font-size:12px; margin-top:2px; }
+  .eb { font-size:11px; color:#ee4d2d; text-transform:uppercase; letter-spacing:.12em; }
+</style>
+</head>
+<body>
+  <div class="stack">
+    <div class="item"><div class="label">Eyebrow</div><div class="copy"><div class="eb">Mega campaign</div><div class="meta">All caps · tracked .12em · accent color · 12px</div></div></div>
+    <div class="item"><div class="label">Headline</div><div class="copy ex">Mid-year deals with free shipping and daily flash prices.</div></div>
+    <div class="item"><div class="label">CTA</div><div class="copy">Shop now · View cart · Place order · Return to shop<div class="meta">Imperative verb. 2 words max where possible.</div></div></div>
+    <div class="item"><div class="label">Empty</div><div class="copy"><strong>Your cart is empty.</strong> Browse the marketplace and add a few deals to continue.</div></div>
+    <div class="item"><div class="label">Form hint</div><div class="copy meta">Use your phone number or email address.</div></div>
+    <div class="item"><div class="label">Form error</div><div class="copy" style="color:#d73211">Enter a valid phone number or email address.</div></div>
+    <div class="item"><div class="label">Auth CTA</div><div class="copy" style="font-size:13px;letter-spacing:0">LOG IN · SIGN UP · PROCESSING…<div class="meta">UPPERCASE for auth submits only.</div></div></div>
+  </div>
+</body>
+</html>
